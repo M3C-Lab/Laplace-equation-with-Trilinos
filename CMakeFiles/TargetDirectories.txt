@@ -1,0 +1,4 @@
+/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles/laplace_fem_core.dir
+/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles/laplace_fem_2d.dir
+/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles/edit_cache.dir
+/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles/rebuild_cache.dir
