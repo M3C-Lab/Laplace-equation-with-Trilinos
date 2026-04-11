@@ -1,0 +1,74 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "Trilinos_ROOT": "/home/xuanming/lib/Trilinos",
+        "Kokkos_LAUNCH_COMPILER": "OFF",
+        "CMAKE_CXX_COMPILER": "/home/xuanming/lib/Trilinos/bin/nvcc_wrapper"
+      },
+      "environment": {
+        "NVCC_WRAPPER_DEFAULT_COMPILER": "/home/xuanming/lib/mpich-4.3.2/bin/mpicxx"
+      }
+    },
+    {
+      "name": "backend-openmp",
+      "hidden": true,
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build/openmp",
+      "cacheVariables": {
+        "LAPLACE_FEM_BACKEND": "OPENMP"
+      }
+    },
+    {
+      "name": "backend-cuda",
+      "hidden": true,
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build/cuda",
+      "cacheVariables": {
+        "LAPLACE_FEM_BACKEND": "CUDA"
+      }
+    },
+    {
+      "name": "single-rank-serial",
+      "inherits": "backend-openmp",
+      "displayName": "Single Rank CPU Baseline",
+      "binaryDir": "${sourceDir}/build/serial",
+      "cacheVariables": {
+        "LAPLACE_FEM_ENABLE_OPENMP": "OFF"
+      }
+    },
+    {
+      "name": "single-rank-openmp",
+      "inherits": "backend-openmp",
+      "displayName": "Single Rank + OpenMP"
+    },
+    {
+      "name": "single-rank-cuda",
+      "inherits": "backend-cuda",
+      "displayName": "Single Rank + CUDA"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "single-rank-serial",
+      "configurePreset": "single-rank-serial"
+    },
+    {
+      "name": "single-rank-openmp",
+      "configurePreset": "single-rank-openmp"
+    },
+    {
+      "name": "single-rank-cuda",
+      "configurePreset": "single-rank-cuda"
+    }
+  ]
+}
