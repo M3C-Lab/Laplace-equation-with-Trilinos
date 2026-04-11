@@ -7,6 +7,7 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o
  /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/LinearSolver.hpp
  /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/MeshGenerator.hpp
  /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/PostProcessor.hpp
+ /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/Timing.hpp
  /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/TriangleElement.hpp
  /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/TriangleQuadrature.hpp
  /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/Types.hpp

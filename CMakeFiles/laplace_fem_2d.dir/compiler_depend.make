@@ -6,6 +6,7 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
   /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/LinearSolver.hpp \
   /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/MeshGenerator.hpp \
   /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/PostProcessor.hpp \
+  /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/Timing.hpp \
   /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/TriangleElement.hpp \
   /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/TriangleQuadrature.hpp \
   /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/Types.hpp \
@@ -1142,8 +1143,6 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 
 /usr/local/cuda-13/targets/x86_64-linux/include/sm_32_intrinsics.hpp:
 
-/usr/include/c++/13/bits/stl_construct.h:
-
 /usr/include/c++/13/bits/std_thread.h:
 
 /usr/include/c++/13/bits/shared_ptr_base.h:
@@ -1560,6 +1559,10 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 
 /usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/__type_traits/result_of.h:
 
+/usr/local/cuda-13/targets/x86_64-linux/include/sm_32_intrinsics.h:
+
+/usr/include/c++/13/bits/postypes.h:
+
 /usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/__cmath/isnan.h:
 
 /home/xuanming/lib/Trilinos/include/kokkos/experimental/__p0009_bits/config.hpp:
@@ -1626,13 +1629,13 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 
 /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/MeshGenerator.hpp:
 
-/home/xuanming/lib/Trilinos/include/Tpetra_Access.hpp:
-
-/home/xuanming/lib/Trilinos/include/KokkosKernels_default_types.hpp:
+/home/xuanming/lib/Trilinos/include/kokkos/Kokkos_MathematicalConstants.hpp:
 
 /home/xuanming/lib/Trilinos/include/Teuchos_config.h:
 
-/home/xuanming/lib/Trilinos/include/kokkos/Kokkos_MathematicalConstants.hpp:
+/home/xuanming/lib/Trilinos/include/Tpetra_Access.hpp:
+
+/home/xuanming/lib/Trilinos/include/KokkosKernels_default_types.hpp:
 
 /home/xuanming/lib/Trilinos/include/Tpetra_Details_Profiling.hpp:
 
@@ -1870,10 +1873,6 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 
 /home/xuanming/lib/Trilinos/include/KokkosGraph_RCM.hpp:
 
-/home/xuanming/lib/Trilinos/include/KokkosSparse_Utils_rocsparse.hpp:
-
-/home/xuanming/lib/Trilinos/include/KokkosKernels_SimpleUtils.hpp:
-
 /home/xuanming/lib/Trilinos/include/kokkos/desul/atomics/Common.hpp:
 
 /home/xuanming/lib/Trilinos/include/TpetraExt_MatrixMatrix_fwd.hpp:
@@ -1895,6 +1894,10 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 /home/xuanming/lib/Trilinos/include/Teuchos_ArrayView.hpp:
 
 /home/xuanming/lib/Trilinos/include/Kokkos_InnerProductSpaceTraits.hpp:
+
+/home/xuanming/lib/Trilinos/include/KokkosSparse_Utils_rocsparse.hpp:
+
+/home/xuanming/lib/Trilinos/include/KokkosKernels_SimpleUtils.hpp:
 
 /usr/include/c++/13/bits/basic_string.h:
 
@@ -2108,14 +2111,6 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 
 /usr/local/cuda-13/targets/x86_64-linux/include/crt/device_double_functions.h:
 
-/usr/include/c++/13/bits/stl_vector.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/home/xuanming/lib/Trilinos/include/Tpetra_ConfigDefs.hpp:
-
-/home/xuanming/lib/Trilinos/include/kokkos/experimental/__p0009_bits/macros.hpp:
-
 /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Half_ReductionIdentity.hpp:
 
 /home/xuanming/lib/Trilinos/include/Teuchos_DefaultSerialComm.hpp:
@@ -2129,6 +2124,14 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 /home/xuanming/lib/Trilinos/include/Tpetra_Vector.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/home/xuanming/lib/Trilinos/include/Tpetra_ConfigDefs.hpp:
+
+/home/xuanming/lib/Trilinos/include/kokkos/experimental/__p0009_bits/macros.hpp:
 
 /home/xuanming/lib/Trilinos/include/Tpetra_CrsGraph_decl.hpp:
 
@@ -2167,6 +2170,10 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 /home/xuanming/lib/Trilinos/include/kokkos/View/Hooks/Kokkos_ViewHooks.hpp:
 
 /usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/__type_traits/is_nothrow_constructible.h:
+
+/home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/Timing.hpp:
+
+/usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/__concepts/concept_macros.h:
 
 /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling.hpp:
 
@@ -2433,6 +2440,8 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 /home/xuanming/lib/Trilinos/include/Tpetra_Packable.hpp:
 
 /usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/c++/13/bits/stl_construct.h:
 
 /usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/__functional/binary_function.h:
 
@@ -3084,8 +3093,6 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 
 /usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/climits:
 
-/usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/__concepts/concept_macros.h:
-
 /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Volatile_Load.hpp:
 
 /usr/local/cuda-13.0/targets/x86_64-linux/include/cccl/cuda/std/__cstddef/types.h:
@@ -3367,7 +3374,3 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o: /home/xuanming/Desktop/Laplace-equ
 /home/xuanming/lib/Trilinos/include/Tpetra_RowGraph.hpp:
 
 /usr/local/cuda-13/targets/x86_64-linux/include/sm_32_atomic_functions.h:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/usr/local/cuda-13/targets/x86_64-linux/include/sm_32_intrinsics.h:

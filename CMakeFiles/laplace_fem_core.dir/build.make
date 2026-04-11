@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/xuanming/Desktop/Laplace-equation-with-Trilinos
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc
+CMAKE_BINARY_DIR = /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda
 
 # Include any dependencies generated for this target.
 include CMakeFiles/laplace_fem_core.dir/depend.make
@@ -72,7 +72,7 @@ include CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o: CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/ProblemData.cpp
 CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o: CMakeFiles/laplace_fem_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o"
 	/home/xuanming/lib/Trilinos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o -MF CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o.d -o CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.o -c /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/ProblemData.cpp
 
 CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.i: cmake_force
@@ -86,7 +86,7 @@ CMakeFiles/laplace_fem_core.dir/src/ProblemData.cpp.s: cmake_force
 CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o: CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/MeshGenerator.cpp
 CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o: CMakeFiles/laplace_fem_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o"
 	/home/xuanming/lib/Trilinos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o -MF CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o.d -o CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.o -c /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/MeshGenerator.cpp
 
 CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.i: cmake_force
@@ -100,7 +100,7 @@ CMakeFiles/laplace_fem_core.dir/src/MeshGenerator.cpp.s: cmake_force
 CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o: CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/TriangleQuadrature.cpp
 CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o: CMakeFiles/laplace_fem_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o"
 	/home/xuanming/lib/Trilinos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o -MF CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o.d -o CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.o -c /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/TriangleQuadrature.cpp
 
 CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.i: cmake_force
@@ -114,7 +114,7 @@ CMakeFiles/laplace_fem_core.dir/src/TriangleQuadrature.cpp.s: cmake_force
 CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o: CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/TriangleElement.cpp
 CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o: CMakeFiles/laplace_fem_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o"
 	/home/xuanming/lib/Trilinos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o -MF CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o.d -o CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.o -c /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/TriangleElement.cpp
 
 CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.i: cmake_force
@@ -128,7 +128,7 @@ CMakeFiles/laplace_fem_core.dir/src/TriangleElement.cpp.s: cmake_force
 CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o: CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/Assembler.cpp
 CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o: CMakeFiles/laplace_fem_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o"
 	/home/xuanming/lib/Trilinos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) --host-only -MD -MT CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o -MF CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o.d -o CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.o -c /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/Assembler.cpp
 
 CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.i: cmake_force
@@ -142,7 +142,7 @@ CMakeFiles/laplace_fem_core.dir/src/Assembler.cpp.s: cmake_force
 CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o: CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/LinearSolver.cpp
 CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o: CMakeFiles/laplace_fem_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o"
 	/home/xuanming/lib/Trilinos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o -MF CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o.d -o CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o -c /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/LinearSolver.cpp
 
 CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.i: cmake_force
@@ -156,7 +156,7 @@ CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.s: cmake_force
 CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o: CMakeFiles/laplace_fem_core.dir/flags.make
 CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/PostProcessor.cpp
 CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o: CMakeFiles/laplace_fem_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o"
 	/home/xuanming/lib/Trilinos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o -MF CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o.d -o CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o -c /home/xuanming/Desktop/Laplace-equation-with-Trilinos/src/PostProcessor.cpp
 
 CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.i: cmake_force
@@ -189,7 +189,7 @@ liblaplace_fem_core.a: CMakeFiles/laplace_fem_core.dir/src/LinearSolver.cpp.o
 liblaplace_fem_core.a: CMakeFiles/laplace_fem_core.dir/src/PostProcessor.cpp.o
 liblaplace_fem_core.a: CMakeFiles/laplace_fem_core.dir/build.make
 liblaplace_fem_core.a: CMakeFiles/laplace_fem_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library liblaplace_fem_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library liblaplace_fem_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/laplace_fem_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/laplace_fem_core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -202,6 +202,6 @@ CMakeFiles/laplace_fem_core.dir/clean:
 .PHONY : CMakeFiles/laplace_fem_core.dir/clean
 
 CMakeFiles/laplace_fem_core.dir/depend:
-	cd /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xuanming/Desktop/Laplace-equation-with-Trilinos /home/xuanming/Desktop/Laplace-equation-with-Trilinos /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/CMakeFiles/laplace_fem_core.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xuanming/Desktop/Laplace-equation-with-Trilinos /home/xuanming/Desktop/Laplace-equation-with-Trilinos /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda /home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda/CMakeFiles/laplace_fem_core.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/laplace_fem_core.dir/depend
 

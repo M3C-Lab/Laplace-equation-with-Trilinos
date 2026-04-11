@@ -243,19 +243,30 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /usr/include/c++/13/bits/stl_map.h \
     /usr/include/c++/13/bits/stl_multimap.h \
     /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/LinearSolver.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_RCP.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_RCPDecl.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_RCPNode.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_ConfigDefs.hpp \
-    /home/xuanming/lib/Trilinos/include/TeuchosCore_config.h \
-    /home/xuanming/lib/Trilinos/include/Teuchos_config.h \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Core.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Core_fwd.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Macros.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_config.h \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_DesulAtomicsConfig.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_NvidiaGpuArchitectures.hpp \
+    /usr/local/cuda-13/bin/../targets/x86_64-linux/include/cuda.h \
+    /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+    /usr/include/stdint.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar.h \
+    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+    /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+    /usr/include/c++/13/version \
+    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_Config_SetupBackend.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/setup/Kokkos_Setup_Cuda.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Printf.hpp \
+    /usr/include/c++/13/cstdio \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Error.hpp \
     /usr/include/c++/13/string \
     /usr/include/c++/13/bits/stringfwd.h \
     /usr/include/c++/13/bits/char_traits.h \
     /usr/include/c++/13/bits/postypes.h \
     /usr/include/c++/13/cwchar \
     /usr/include/wchar.h \
-    /usr/include/x86_64-linux-gnu/bits/wchar.h \
     /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
     /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
     /usr/include/c++/13/bits/localefwd.h \
@@ -271,7 +282,6 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /usr/include/c++/13/string_view \
     /usr/include/c++/13/bits/string_view.tcc \
     /usr/include/c++/13/ext/string_conversions.h \
-    /usr/include/c++/13/cstdio \
     /usr/include/c++/13/cerrno \
     /usr/include/errno.h \
     /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -282,9 +292,50 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
     /usr/include/c++/13/bits/charconv.h \
     /usr/include/c++/13/bits/basic_string.tcc \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Abort.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Cuda/Kokkos_Cuda_abort.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Assert.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Utilities.hpp \
+    /usr/include/c++/13/cstdint \
+    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_Config_FwdBackend.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/fwd/Kokkos_Fwd_OPENMP.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/fwd/Kokkos_Fwd_SERIAL.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/fwd/Kokkos_Fwd_CUDA.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_Config_DeclareBackend.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/decl/Kokkos_Declare_OPENMP.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/OpenMP/Kokkos_OpenMP.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_HostSpace.hpp \
     /usr/include/c++/13/cstring \
-    /usr/include/c++/13/iostream \
-    /usr/include/c++/13/ostream \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Concepts.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_DetectionIdiom.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_MemoryTraits.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Traits.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_BitManipulation.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_NumericTraits.hpp \
+    /usr/include/c++/13/climits \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_SharedAlloc.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Tools.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_ExecPolicy.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_AnalyzePolicy.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_Traits_fwd.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_PolicyTraitAdaptor.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_ExecutionSpaceTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_GraphKernelTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_GraphImpl_fwd.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_IndexTypeTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_IterationPatternTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Rank.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Layout.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_LaunchBoundsTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_StaticBatchSizeTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_OccupancyControlTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_ScheduleTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_WorkItemPropertyTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_WorkTagTrait.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_TypeInfo.hpp \
+    /usr/include/c++/13/sstream \
+    /usr/include/c++/13/istream \
     /usr/include/c++/13/ios \
     /usr/include/c++/13/exception \
     /usr/include/c++/13/bits/exception_ptr.h \
@@ -320,51 +371,42 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
     /usr/include/c++/13/bits/locale_facets.tcc \
     /usr/include/c++/13/bits/basic_ios.tcc \
+    /usr/include/c++/13/ostream \
     /usr/include/c++/13/bits/ostream.tcc \
-    /usr/include/c++/13/istream \
     /usr/include/c++/13/bits/istream.tcc \
-    /usr/include/c++/13/iomanip \
-    /usr/include/c++/13/locale \
-    /usr/include/c++/13/bits/locale_facets_nonio.h \
-    /usr/include/c++/13/ctime \
-    /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
-    /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
-    /usr/include/libintl.h \
-    /usr/include/c++/13/bits/codecvt.h \
-    /usr/include/c++/13/bits/locale_facets_nonio.tcc \
-    /usr/include/c++/13/bits/locale_conv.h \
-    /usr/include/c++/13/bits/quoted_string.h \
-    /usr/include/c++/13/sstream \
     /usr/include/c++/13/bits/sstream.tcc \
-    /usr/include/c++/13/cassert \
-    /usr/include/c++/13/complex \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Tuners.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/KokkosExp_MDRangePolicy.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Array.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Swap.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_StringManipulation.hpp \
     /usr/include/c++/13/algorithm \
     /usr/include/c++/13/bits/ranges_algo.h \
     /usr/include/c++/13/bits/ranges_algobase.h \
     /usr/include/c++/13/pstl/glue_algorithm_defs.h \
     /usr/include/c++/13/pstl/execution_defs.h \
-    /home/xuanming/lib/Trilinos/include/Teuchos_DLLExportMacro.h \
-    /home/xuanming/lib/Trilinos/include/Teuchos_any.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_Assert.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_TestForException.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_TypeNameTraits.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_stacktrace.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_Exceptions.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_map.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_ENull.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_toString.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_getBaseObjVoidPtr.hpp \
-    /home/xuanming/lib/Trilinos/include/TeuchosCore_ConfigDefs.hpp \
-    /usr/include/c++/13/atomic \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/KokkosExp_Host_IterateTile.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling_Interface.hpp \
+    /usr/include/c++/13/cinttypes \
+    /usr/include/inttypes.h \
+    /usr/include/dlfcn.h \
+    /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
+    /usr/include/x86_64-linux-gnu/bits/dl_find_object.h \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling_DeviceInfo.hpp \
+    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling_C_Interface.h \
+    /usr/include/c++/13/cassert \
+    /usr/include/c++/13/memory \
+    /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+    /usr/include/c++/13/bits/align.h \
+    /usr/include/c++/13/bits/unique_ptr.h \
+    /usr/include/c++/13/bits/shared_ptr.h \
+    /usr/include/c++/13/bits/shared_ptr_base.h \
+    /usr/include/c++/13/bits/allocated_ptr.h \
+    /usr/include/c++/13/ext/concurrence.h \
+    /usr/include/c++/13/bits/shared_ptr_atomic.h \
     /usr/include/c++/13/bits/atomic_base.h \
-    /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-    /usr/include/stdint.h \
-    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-    /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
     /usr/include/c++/13/bits/atomic_lockfree_defines.h \
     /usr/include/c++/13/bits/atomic_wait.h \
-    /usr/include/c++/13/cstdint \
-    /usr/include/c++/13/climits \
     /usr/include/unistd.h \
     /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
     /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -379,97 +421,13 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
     /usr/include/x86_64-linux-gnu/bits/syscall.h \
     /usr/include/c++/13/bits/std_mutex.h \
-    /home/xuanming/lib/Trilinos/include/Teuchos_NullIteratorTraits.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_Ptr.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_PtrDecl.hpp \
-    /home/xuanming/lib/Trilinos/include/Teuchos_dyn_cast.hpp \
-    /home/xuanming/lib/Trilinos/include/Tpetra_CrsMatrix.hpp \
-    /home/xuanming/lib/Trilinos/include/Tpetra_CrsMatrix_decl.hpp \
-    /home/xuanming/lib/Trilinos/include/Tpetra_CrsMatrix_fwd.hpp \
-    /home/xuanming/lib/Trilinos/include/Tpetra_Details_DefaultTypes.hpp \
-    /home/xuanming/lib/Trilinos/include/TpetraCore_config.h \
-    /home/xuanming/lib/Trilinos/include/Tpetra_KokkosClassic_DefaultNode_config.h \
-    /home/xuanming/lib/Trilinos/include/Tpetra_KokkosCompat_ClassicNodeAPI_Wrapper.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Core.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Core_fwd.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Macros.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_config.h \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_DesulAtomicsConfig.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_NvidiaGpuArchitectures.hpp \
-    /usr/local/cuda-13/bin/../targets/x86_64-linux/include/cuda.h \
-    /usr/include/c++/13/version \
-    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_Config_SetupBackend.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/setup/Kokkos_Setup_Cuda.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Printf.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Error.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Abort.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Cuda/Kokkos_Cuda_abort.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Assert.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Utilities.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_Config_FwdBackend.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/fwd/Kokkos_Fwd_OPENMP.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/fwd/Kokkos_Fwd_SERIAL.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/fwd/Kokkos_Fwd_CUDA.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/KokkosCore_Config_DeclareBackend.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/decl/Kokkos_Declare_OPENMP.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/OpenMP/Kokkos_OpenMP.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_HostSpace.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Concepts.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_DetectionIdiom.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_MemoryTraits.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Traits.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_BitManipulation.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_NumericTraits.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_SharedAlloc.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Tools.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_ExecPolicy.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_AnalyzePolicy.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_Traits_fwd.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_PolicyTraitAdaptor.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_ExecutionSpaceTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_GraphKernelTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_GraphImpl_fwd.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_IndexTypeTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_IterationPatternTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Rank.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Layout.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_LaunchBoundsTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_StaticBatchSizeTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_OccupancyControlTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_ScheduleTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_WorkItemPropertyTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/traits/Kokkos_WorkTagTrait.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_TypeInfo.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Tuners.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/KokkosExp_MDRangePolicy.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Array.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_Swap.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_StringManipulation.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/KokkosExp_Host_IterateTile.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling_Interface.hpp \
-    /usr/include/c++/13/cinttypes \
-    /usr/include/inttypes.h \
-    /usr/include/dlfcn.h \
-    /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
-    /usr/include/x86_64-linux-gnu/bits/dl_find_object.h \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling_DeviceInfo.hpp \
-    /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Profiling_C_Interface.h \
-    /usr/include/c++/13/memory \
-    /usr/include/c++/13/bits/stl_raw_storage_iter.h \
-    /usr/include/c++/13/bits/align.h \
-    /usr/include/c++/13/bits/unique_ptr.h \
-    /usr/include/c++/13/bits/shared_ptr.h \
-    /usr/include/c++/13/bits/shared_ptr_base.h \
-    /usr/include/c++/13/bits/allocated_ptr.h \
-    /usr/include/c++/13/ext/concurrence.h \
-    /usr/include/c++/13/bits/shared_ptr_atomic.h \
     /usr/include/c++/13/backward/auto_ptr.h \
     /usr/include/c++/13/bits/ranges_uninitialized.h \
     /usr/include/c++/13/pstl/glue_memory_defs.h \
     /usr/include/c++/13/mutex \
     /usr/include/c++/13/bits/chrono.h \
     /usr/include/c++/13/ratio \
+    /usr/include/c++/13/ctime \
     /usr/include/c++/13/bits/parse_numbers.h \
     /usr/include/c++/13/bits/unique_lock.h \
     /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_HostSpace_deepcopy.hpp \
@@ -594,6 +552,7 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /home/xuanming/lib/Trilinos/include/kokkos/experimental/__p2642_bits/layout_padded.hpp \
     /home/xuanming/lib/Trilinos/include/kokkos/experimental/__p2630_bits/submdspan.hpp \
     /home/xuanming/lib/Trilinos/include/kokkos/experimental/__p2630_bits/submdspan_extents.hpp \
+    /usr/include/c++/13/complex \
     /home/xuanming/lib/Trilinos/include/kokkos/experimental/__p2630_bits/strided_slice.hpp \
     /home/xuanming/lib/Trilinos/include/kokkos/experimental/__p2630_bits/submdspan_mapping.hpp \
     /home/xuanming/lib/Trilinos/include/kokkos/experimental/__p2389_bits/dims.hpp \
@@ -667,6 +626,16 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_ClockTic.hpp \
     /usr/include/c++/13/chrono \
     /usr/include/c++/13/bits/chrono_io.h \
+    /usr/include/c++/13/iomanip \
+    /usr/include/c++/13/locale \
+    /usr/include/c++/13/bits/locale_facets_nonio.h \
+    /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+    /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+    /usr/include/libintl.h \
+    /usr/include/c++/13/bits/codecvt.h \
+    /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+    /usr/include/c++/13/bits/locale_conv.h \
+    /usr/include/c++/13/bits/quoted_string.h \
     /usr/include/c++/13/format \
     /usr/include/c++/13/charconv \
     /usr/include/c++/13/variant \
@@ -687,6 +656,7 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /usr/include/c++/13/bits/stream_iterator.h \
     /usr/include/c++/13/thread \
     /usr/include/c++/13/stop_token \
+    /usr/include/c++/13/atomic \
     /usr/include/c++/13/bits/std_thread.h \
     /usr/include/c++/13/semaphore \
     /usr/include/c++/13/bits/semaphore_base.h \
@@ -910,6 +880,36 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /home/xuanming/lib/Trilinos/include/kokkos/Cuda/Kokkos_Cuda_WorkGraphPolicy.hpp \
     /home/xuanming/lib/Trilinos/include/kokkos/impl/Kokkos_Combined_Reducer.hpp \
     /home/xuanming/lib/Trilinos/include/kokkos/Kokkos_AcquireUniqueTokenImpl.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_RCP.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_RCPDecl.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_RCPNode.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_ConfigDefs.hpp \
+    /home/xuanming/lib/Trilinos/include/TeuchosCore_config.h \
+    /home/xuanming/lib/Trilinos/include/Teuchos_config.h \
+    /usr/include/c++/13/iostream \
+    /home/xuanming/lib/Trilinos/include/Teuchos_DLLExportMacro.h \
+    /home/xuanming/lib/Trilinos/include/Teuchos_any.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_Assert.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_TestForException.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_TypeNameTraits.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_stacktrace.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_Exceptions.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_map.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_ENull.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_toString.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_getBaseObjVoidPtr.hpp \
+    /home/xuanming/lib/Trilinos/include/TeuchosCore_ConfigDefs.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_NullIteratorTraits.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_Ptr.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_PtrDecl.hpp \
+    /home/xuanming/lib/Trilinos/include/Teuchos_dyn_cast.hpp \
+    /home/xuanming/lib/Trilinos/include/Tpetra_CrsMatrix.hpp \
+    /home/xuanming/lib/Trilinos/include/Tpetra_CrsMatrix_decl.hpp \
+    /home/xuanming/lib/Trilinos/include/Tpetra_CrsMatrix_fwd.hpp \
+    /home/xuanming/lib/Trilinos/include/Tpetra_Details_DefaultTypes.hpp \
+    /home/xuanming/lib/Trilinos/include/TpetraCore_config.h \
+    /home/xuanming/lib/Trilinos/include/Tpetra_KokkosClassic_DefaultNode_config.h \
+    /home/xuanming/lib/Trilinos/include/Tpetra_KokkosCompat_ClassicNodeAPI_Wrapper.hpp \
     /home/xuanming/lib/Trilinos/include/TpetraExt_MatrixMatrix_fwd.hpp \
     /home/xuanming/lib/Trilinos/include/Tpetra_BlockCrsMatrix_fwd.hpp \
     /home/xuanming/lib/Trilinos/include/Tpetra_Import_fwd.hpp \
@@ -1119,5 +1119,6 @@ CMakeFiles/laplace_fem_2d.dir/src/main.cpp.o : /home/xuanming/Desktop/Laplace-eq
     /home/xuanming/lib/Trilinos/include/Tpetra_Details_ExecutionSpacesSlot.hpp \
     /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/MeshGenerator.hpp \
     /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/PostProcessor.hpp \
+    /home/xuanming/Desktop/Laplace-equation-with-Trilinos/include/Timing.hpp \
     /home/xuanming/lib/Trilinos/include/Tpetra_Core.hpp \
     /home/xuanming/lib/Trilinos/include/Teuchos_VerboseObject.hpp

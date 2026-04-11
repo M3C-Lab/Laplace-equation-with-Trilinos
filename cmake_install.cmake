@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

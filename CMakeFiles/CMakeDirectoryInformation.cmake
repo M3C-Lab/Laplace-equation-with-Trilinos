@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/xuanming/Desktop/Laplace-equation-with-Trilinos")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build-nvcc")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/xuanming/Desktop/Laplace-equation-with-Trilinos/build/cuda")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)
