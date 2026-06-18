@@ -1,0 +1,56 @@
+OpenMP binding strategy summary
+nx = 256
+ny = 256
+np = 7
+threads = 4
+solver_tolerance = 1e-9
+sleep_seconds = 5
+
+binding = spread_threads
+  OMP_PROC_BIND = spread
+  OMP_PLACES = threads
+  iterations = 237
+  mesh_load = 0.0913399
+  assembly = 0.110464
+  linear_solve = 81.9095
+
+binding = spread_cores
+  OMP_PROC_BIND = spread
+  OMP_PLACES = cores
+  iterations = 237
+  mesh_load = 0.0795614
+  assembly = 0.098068
+  linear_solve = 37.1311
+
+binding = close_threads
+  OMP_PROC_BIND = close
+  OMP_PLACES = threads
+  iterations = 237
+  mesh_load = 0.101526
+  assembly = 0.164979
+  linear_solve = 82.5722
+
+binding = close_cores
+  OMP_PROC_BIND = close
+  OMP_PLACES = cores
+  iterations = 237
+  mesh_load = 0.0674697
+  assembly = 0.100065
+  linear_solve = 36.9835
+
+binding = false_threads
+  OMP_PROC_BIND = false
+  OMP_PLACES = threads
+  iterations = 237
+  mesh_load = 0.0512858
+  assembly = 0.0408914
+  linear_solve = 0.551161
+
+binding = false_cores
+  OMP_PROC_BIND = false
+  OMP_PLACES = cores
+  iterations = 237
+  mesh_load = 0.0344767
+  assembly = 0.0379845
+  linear_solve = 0.562953
+

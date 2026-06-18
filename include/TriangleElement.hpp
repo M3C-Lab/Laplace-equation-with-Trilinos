@@ -20,6 +20,9 @@ class TriangleElement {
     const Mesh& mesh,
     const Element& element) const;
 
+  LocalElementMatrix computeLocalSystem(
+    const std::array<Node, 3>& nodes) const;
+
  private:
   const TriangleQuadrature& quadrature_;
 };

@@ -18,6 +18,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(Trilinos_ROOT "/home/xuanming/lib/Trilinos" CACHE PATH "Path to the Trilinos installation prefix")
+set(METIS_ROOT "/home/xuanming/lib/metis-5.0.3" CACHE PATH "Path to the METIS installation prefix")
+set(HDF5_ROOT "/home/xuanming/lib/hdf5-1.12.2" CACHE PATH "Path to the HDF5 installation prefix")
 list(PREPEND CMAKE_PREFIX_PATH "${Trilinos_ROOT}")
 
 # This application uses Kokkos through Trilinos but does not compile CUDA
@@ -36,16 +38,28 @@ endif()
 
 find_package(Trilinos REQUIRED COMPONENTS Teuchos Tpetra Belos Ifpack2)
 find_package(OpenMP QUIET)
+find_package(HDF5 REQUIRED)
+find_path(METIS_INCLUDE_DIR metis.h HINTS "${METIS_ROOT}/include")
+find_library(METIS_LIBRARY metis HINTS "${METIS_ROOT}/lib")
+
+if(NOT METIS_INCLUDE_DIR OR NOT METIS_LIBRARY)
+  message(FATAL_ERROR "Failed to locate METIS under ${METIS_ROOT}")
+endif()
 
 set(LAPLACE_FEM_INCLUDE_DIRS
   ${CMAKE_CURRENT_SOURCE_DIR}/include
   ${Trilinos_INCLUDE_DIRS}
+  ${METIS_INCLUDE_DIR}
+  ${HDF5_INCLUDE_DIRS}
 )
 
 
 set(laplace_fem_core_src
   src/ProblemData.cpp
+  src/HDF5_IO.cpp
   src/MeshGenerator.cpp
+  src/PartitionIO.cpp
+  src/Preprocessor.cpp
   src/TriangleQuadrature.cpp
   src/TriangleElement.cpp
   src/Assembler.cpp
@@ -96,10 +110,16 @@ target_link_libraries(laplace_fem_core
     Tpetra::all_libs
     Belos::all_libs
     Ifpack2::all_libs
+    ${METIS_LIBRARY}
+    ${HDF5_LIBRARIES}
 )
 
 add_executable(laplace_fem_2d
   src/main.cpp
+)
+
+add_executable(laplace_preprocess
+  src/preprocess_main.cpp
 )
 
 target_include_directories(laplace_fem_2d
@@ -107,7 +127,17 @@ target_include_directories(laplace_fem_2d
     ${LAPLACE_FEM_INCLUDE_DIRS}
 )
 
+target_include_directories(laplace_preprocess
+  PRIVATE
+    ${LAPLACE_FEM_INCLUDE_DIRS}
+)
+
 target_link_libraries(laplace_fem_2d
+  PRIVATE
+    laplace_fem_core
+)
+
+target_link_libraries(laplace_preprocess
   PRIVATE
     laplace_fem_core
 )

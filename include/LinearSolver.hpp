@@ -41,7 +41,8 @@ DistributedSolution solveLinearSystem(
   const DiscreteSystem& system,
   const Teuchos::RCP<Tpetra::CrsMatrix<Scalar, LocalOrdinal, GlobalOrdinal, NodeType>>& matrix,
   const Teuchos::RCP<const Teuchos::Comm<int>>& comm,
-  std::ostream& out);
+  std::ostream& out,
+  double solverTolerance = 1.0e-9);
 
 int getApplicationThreadCount();
 

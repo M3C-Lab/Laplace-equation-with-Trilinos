@@ -39,82 +39,82 @@ with homogeneous Dirichlet boundary conditions and matching right-hand side.
 
 ## Configure And Build
 
-This repo now provides two user-facing CMake presets:
+This repo now provides three user-facing CMake presets:
 
-- `single-rank-openmp`
-- `single-rank-cuda`
+- `cpu`
+- `openmp`
+- `cuda`
 
-The OpenMP preset uses the build tree `build/openmp`.
-The CUDA preset uses the build tree `build/cuda`.
+The CPU/OpenMP/CUDA presets use separate build trees:
+
+- `build-cpu`
+- `build-openmp`
+- `build-cuda`
 
 Example:
 
 ```bash
-cmake --preset single-rank-openmp
-cmake --build --preset single-rank-openmp
+cmake --preset openmp
+cmake --build --preset openmp
 ```
 
 or
 
 ```bash
-cmake --preset single-rank-cuda
-cmake --build --preset single-rank-cuda
+cmake --preset cuda
+cmake --build --preset cuda
 ```
 
-If you prefer the older script entry point, it is still available:
+If you prefer one-click scripts instead of calling the presets manually:
 
 ```bash
-LAPLACE_FEM_BACKEND=OPENMP BUILD_DIR=build/openmp ./scripts/configure.sh
-BUILD_DIR=build/openmp ./scripts/build.sh
+./scripts/build_cpu.sh
+./scripts/build_openmp.sh
+./scripts/build_cuda.sh
 ```
 
-For the CUDA backend:
+Preprocess a structured mesh and partition it for MPI:
 
 ```bash
-LAPLACE_FEM_BACKEND=CUDA BUILD_DIR=build/cuda ./scripts/configure.sh
-BUILD_DIR=build/cuda ./scripts/build.sh
+./scripts/preprocess_mesh.sh 16 16 2
 ```
+
+The generated mesh files are stored under `Mesh/nx=16_ny=16_np=2/`.
 
 ## Run
 
-Single rank + OpenMP:
+CPU:
 
 ```bash
-./scripts/run_single_rank_openmp.sh 16 16
+./scripts/run_cpu.sh 16 16
 ```
 
-Single rank + CUDA:
+OpenMP:
 
 ```bash
-./scripts/run_single_rank_cuda.sh 16 16
+./scripts/run_openmp.sh 16 16
 ```
 
-The generic scripts are still available if you want direct control:
+CUDA:
 
 ```bash
-BUILD_DIR=build/openmp ./scripts/run_openmp.sh 16 16
-BUILD_DIR=build/cuda OMP_NUM_THREADS=1 ./scripts/run_openmp.sh 16 16
-```
-
-## Clean CMake Cache
-
-```bash
-./scripts/clean_cmake.sh
+./scripts/run_cuda.sh 16 16
 ```
 
 ## Parallel Notes
 
 - Matrix assembly uses application-level `OpenMP` pragmas.
 - The Tpetra/Kokkos backend is now selectable through `LAPLACE_FEM_BACKEND=OPENMP|CUDA`.
-- The current code path is intentionally limited to single-rank execution.
+- The CPU path supports MPI-partitioned execution using the preprocessed mesh files.
 - The previous multi-rank partition option was removed because it did not yet provide a robust general partitioning strategy.
 - The current presets use `nvcc_wrapper` because this Trilinos installation exports CUDA-related compile options even for host-side builds.
 
 ## Output
 
-The program writes:
+The program writes solution files into the active mode's build directory:
 
-- `build/solution.csv`
-- `build/solution.vtk`
+- `build-cpu/solution.csv` and `build-cpu/solution.vtk`
+- `build-openmp/solution.csv` and `build-openmp/solution.vtk`
+- `build-cuda/solution.csv` and `build-cuda/solution.vtk`
 
 The VTK file can be opened in ParaView for visualization.

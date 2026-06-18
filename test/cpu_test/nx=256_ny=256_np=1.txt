@@ -1,0 +1,22 @@
+Mesh benchmark report
+mesh = nx=256_ny=256_np=1
+mesh_dir = /home/xuanming/Desktop/Laplace-equation-with-Trilinos/Mesh/nx=256_ny=256_np=1
+runs = 10
+solver_tolerance = 1e-9
+
+Per-run timings (seconds)
+run 01: mesh_load=0.0200681 assembly=0.315341 linear_solve=0.709952
+run 02: mesh_load=0.0199084 assembly=0.31607 linear_solve=0.710654
+run 03: mesh_load=0.0198577 assembly=0.315802 linear_solve=0.711453
+run 04: mesh_load=0.0199052 assembly=0.315691 linear_solve=0.707727
+run 05: mesh_load=0.0200157 assembly=0.315311 linear_solve=0.707881
+run 06: mesh_load=0.0199825 assembly=0.314769 linear_solve=0.708901
+run 07: mesh_load=0.0200087 assembly=0.315494 linear_solve=0.708769
+run 08: mesh_load=0.0199537 assembly=0.316142 linear_solve=0.709812
+run 09: mesh_load=0.0199875 assembly=0.315402 linear_solve=0.709918
+run 10: mesh_load=0.0199175 assembly=0.3158 linear_solve=0.709691
+
+Averages over 10 runs (seconds)
+mesh_load_avg = 0.0199605
+assembly_avg = 0.3155822
+linear_solve_avg = 0.7094758

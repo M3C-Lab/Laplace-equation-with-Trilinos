@@ -7,12 +7,21 @@
 
 #include <algorithm>
 #include <cmath>
+#include <cstdlib>
+#include <filesystem>
 #include <fstream>
 #include <iomanip>
 
 namespace laplace {
 
 namespace detail {
+
+std::filesystem::path outputDirectory() {
+  if (const char* outputDir = std::getenv("LAPLACE_FEM_OUTPUT_DIR")) {
+    return outputDir;
+  }
+  return "build-openmp";
+}
 
 template <class ValueType, class ExecutionSpace>
 Kokkos::View<ValueType*, typename ExecutionSpace::array_layout, typename ExecutionSpace::memory_space> copyStdVectorToView(
@@ -224,7 +233,9 @@ void writeCsv(
   const Mesh& mesh,
   const std::vector<double>& solution,
   const PostProcessSummary& summary) {
-  std::ofstream csv("build/solution.csv");
+  const auto outputDir = detail::outputDirectory();
+  std::filesystem::create_directories(outputDir);
+  std::ofstream csv(outputDir / "solution.csv");
   csv << "node_id,x,y,u_h,u_exact,error,is_boundary\n";
 
   for (std::size_t nodeId = 0; nodeId < mesh.nodes.size(); ++nodeId) {
@@ -243,7 +254,9 @@ void writeLegacyVtk(
   const Mesh& mesh,
   const std::vector<double>& solution,
   const PostProcessSummary& summary) {
-  std::ofstream vtk("build/solution.vtk");
+  const auto outputDir = detail::outputDirectory();
+  std::filesystem::create_directories(outputDir);
+  std::ofstream vtk(outputDir / "solution.vtk");
   vtk << "# vtk DataFile Version 3.0\n";
   vtk << "2D Laplace FEM solution\n";
   vtk << "ASCII\n";
@@ -288,12 +301,16 @@ void writeLegacyVtk(
 
 void reportPostProcessing(
   const PostProcessSummary& summary,
-  std::ostream& out) {
+  std::ostream& out,
+  const bool wroteFiles) {
   out << "Approximate nodal max error: " << summary.maxAbsError << '\n';
   out << "Approximate L2 error (centroid quadrature): " << summary.l2Error << '\n';
-  out << "Post-processing files:\n";
-  out << "  build/solution.csv\n";
-  out << "  build/solution.vtk\n";
+  if (wroteFiles) {
+    const auto outputDir = detail::outputDirectory();
+    out << "Post-processing files:\n";
+    out << "  " << (outputDir / "solution.csv").string() << '\n';
+    out << "  " << (outputDir / "solution.vtk").string() << '\n';
+  }
 }
 
 }  // namespace laplace

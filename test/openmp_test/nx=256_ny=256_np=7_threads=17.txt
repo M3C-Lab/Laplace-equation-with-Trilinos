@@ -1,0 +1,73 @@
+OpenMP thread benchmark
+nx = 256
+ny = 256
+np = 7
+threads = 17
+solver_tolerance = 1e-9
+runs = 10
+
+run 01
+  iterations = 237
+  mesh_load = 0.039769
+  assembly = 0.0311625
+  linear_solve = 10.3731
+
+run 02
+  iterations = 237
+  mesh_load = 0.0334895
+  assembly = 0.0358591
+  linear_solve = 10.8419
+
+run 03
+  iterations = 237
+  mesh_load = 0.0272243
+  assembly = 0.0334161
+  linear_solve = 10.7629
+
+run 04
+  iterations = 237
+  mesh_load = 0.0337326
+  assembly = 0.037264
+  linear_solve = 9.98006
+
+run 05
+  iterations = 237
+  mesh_load = 0.0438354
+  assembly = 0.0337566
+  linear_solve = 10.2866
+
+run 06
+  iterations = 237
+  mesh_load = 0.0467606
+  assembly = 0.0393955
+  linear_solve = 10.664
+
+run 07
+  iterations = 237
+  mesh_load = 0.0430803
+  assembly = 0.036581
+  linear_solve = 10.4991
+
+run 08
+  iterations = 237
+  mesh_load = 0.0377231
+  assembly = 0.0311047
+  linear_solve = 10.4074
+
+run 09
+  iterations = 237
+  mesh_load = 0.030283
+  assembly = 0.0376601
+  linear_solve = 10.2685
+
+run 10
+  iterations = 237
+  mesh_load = 0.0387949
+  assembly = 0.0374556
+  linear_solve = 10.5936
+
+Averages over 10 runs
+  iterations = 237
+  mesh_load_avg = 0.03746927
+  assembly_avg = 0.03536552
+  linear_solve_avg = 10.467716

@@ -1,0 +1,11 @@
+# Ignore build directories and their contents
+build-cpu/
+build-cuda/
+build-openmp/
+
+# Ignore files inside Mesh, keep Mesh directory as a placeholder
+Mesh/*
+!Mesh/
+
+# Ignore all HDF5 (.h5) files
+*.h5

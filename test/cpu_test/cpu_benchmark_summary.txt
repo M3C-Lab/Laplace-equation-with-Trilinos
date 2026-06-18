@@ -1,0 +1,43 @@
+CPU benchmark summary
+runs = 10
+solver_tolerance = 1e-9
+
+nx=128_ny=128_np=1
+  mesh_load_avg = 0.006649998
+  assembly_avg = 0.07802761
+  linear_solve_avg = 0.1140086
+
+nx=128_ny=128_np=2
+  mesh_load_avg = 0.005688506
+  assembly_avg = 0.03926719
+  linear_solve_avg = 0.2227005
+
+nx=256_ny=256_np=1
+  mesh_load_avg = 0.0199605
+  assembly_avg = 0.3155822
+  linear_solve_avg = 0.7094758
+
+nx=256_ny=256_np=7
+  mesh_load_avg = 0.03891404
+  assembly_avg = 0.05304232
+  linear_solve_avg = 0.5481098
+
+nx=512_ny=512_np=1
+  mesh_load_avg = 0.07697143
+  assembly_avg = 1.284264
+  linear_solve_avg = 5.01422
+
+nx=512_ny=512_np=26
+  mesh_load_avg = 0.07927845
+  assembly_avg = 0.07953955
+  linear_solve_avg = 1.307127
+
+nx=1024_ny=1024_np=1
+  mesh_load_avg = 0.3103015
+  assembly_avg = 5.177369
+  linear_solve_avg = 41.01963
+
+nx=1024_ny=1024_np=105
+  mesh_load_avg = 0.383712
+  assembly_avg = 0.1347576
+  linear_solve_avg = 5.999483

@@ -12,9 +12,18 @@ TriangleElement::TriangleElement(const TriangleQuadrature& quadrature)
 LocalElementMatrix TriangleElement::computeLocalSystem(
   const Mesh& mesh,
   const Element& element) const {
-  const Node& n0 = mesh.nodes[element.nodeIds[0]];
-  const Node& n1 = mesh.nodes[element.nodeIds[1]];
-  const Node& n2 = mesh.nodes[element.nodeIds[2]];
+  return computeLocalSystem({
+    mesh.nodes[element.nodeIds[0]],
+    mesh.nodes[element.nodeIds[1]],
+    mesh.nodes[element.nodeIds[2]]
+  });
+}
+
+LocalElementMatrix TriangleElement::computeLocalSystem(
+  const std::array<Node, 3>& nodes) const {
+  const Node& n0 = nodes[0];
+  const Node& n1 = nodes[1];
+  const Node& n2 = nodes[2];
 
   const double twiceArea =
     (n1.x - n0.x) * (n2.y - n0.y) - (n2.x - n0.x) * (n1.y - n0.y);

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <array>
+#include <string>
 #include <map>
 #include <vector>
 
@@ -24,12 +25,41 @@ struct Mesh {
 };
 
 struct MeshPartition {
-  bool useMpiPartition = false;
   int rank = 0;
   int size = 1;
-  int ownedNodeRowBegin = 1;
-  int ownedNodeRowEnd = 0;
+  std::vector<Node> localNodes;
+  std::vector<int> ownedNodeIds;
+  std::vector<int> ghostNodeIds;
+  std::vector<int> localToGlobalNodeIds;
   std::vector<int> localElementIds;
+  std::vector<std::array<int, 3>> lien;
+};
+
+struct PartitionSummary {
+  int cpuSize = 1;
+  std::vector<int> elementOwners;
+  std::vector<int> nodeOwners;
+};
+
+struct MeshMetadata {
+  int nx = 0;
+  int ny = 0;
+  int numNodes = 0;
+  int numElements = 0;
+};
+
+struct PreprocessedMesh {
+  Mesh mesh;
+  MeshMetadata metadata;
+};
+
+struct PreprocessorOptions {
+  int nx = 16;
+  int ny = 16;
+  int partitions = 1;
+  int metisNCommon = 2;
+  bool useDualGraph = true;
+  std::string outputDirectory;
 };
 
 struct DiscreteSystem {

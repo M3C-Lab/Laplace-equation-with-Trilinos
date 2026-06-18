@@ -23,7 +23,7 @@
       "name": "backend-openmp",
       "hidden": true,
       "inherits": "base",
-      "binaryDir": "${sourceDir}/build/openmp",
+      "binaryDir": "${sourceDir}/build-openmp",
       "cacheVariables": {
         "LAPLACE_FEM_BACKEND": "OPENMP"
       }
@@ -32,43 +32,43 @@
       "name": "backend-cuda",
       "hidden": true,
       "inherits": "base",
-      "binaryDir": "${sourceDir}/build/cuda",
+      "binaryDir": "${sourceDir}/build-cuda",
       "cacheVariables": {
         "LAPLACE_FEM_BACKEND": "CUDA"
       }
     },
     {
-      "name": "single-rank-serial",
+      "name": "cpu",
       "inherits": "backend-openmp",
-      "displayName": "Single Rank CPU Baseline",
-      "binaryDir": "${sourceDir}/build/serial",
+      "displayName": "CPU",
+      "binaryDir": "${sourceDir}/build-cpu",
       "cacheVariables": {
         "LAPLACE_FEM_ENABLE_OPENMP": "OFF"
       }
     },
     {
-      "name": "single-rank-openmp",
+      "name": "openmp",
       "inherits": "backend-openmp",
-      "displayName": "Single Rank + OpenMP"
+      "displayName": "OpenMP"
     },
     {
-      "name": "single-rank-cuda",
+      "name": "cuda",
       "inherits": "backend-cuda",
-      "displayName": "Single Rank + CUDA"
+      "displayName": "CUDA"
     }
   ],
   "buildPresets": [
     {
-      "name": "single-rank-serial",
-      "configurePreset": "single-rank-serial"
+      "name": "cpu",
+      "configurePreset": "cpu"
     },
     {
-      "name": "single-rank-openmp",
-      "configurePreset": "single-rank-openmp"
+      "name": "openmp",
+      "configurePreset": "openmp"
     },
     {
-      "name": "single-rank-cuda",
-      "configurePreset": "single-rank-cuda"
+      "name": "cuda",
+      "configurePreset": "cuda"
     }
   ]
 }

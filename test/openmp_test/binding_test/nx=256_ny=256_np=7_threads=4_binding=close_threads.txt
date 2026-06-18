@@ -1,0 +1,36 @@
+OpenMP binding benchmark
+nx = 256
+ny = 256
+np = 7
+threads = 4
+OMP_PROC_BIND = close
+OMP_PLACES = threads
+solver_tolerance = 1e-9
+
+Loading a preprocessed P1 triangular FEM mesh on the unit square.
+Requested subdivisions: nx = 256, ny = 256
+Partition directory: /home/xuanming/Desktop/Laplace-equation-with-Trilinos/Mesh/nx=256_ny=256_np=7
+Selected backend: OPENMP
+Kokkos default execution space: Cuda
+Application OpenMP assembly: enabled
+Application OpenMP threads: 4
+MPI ranks: 7
+Benchmark mode: on
+Solver tolerance: 1e-09
+Mesh statistics:
+  nodes    = 66049
+  elements = 131072
+  dofs     = 65025
+Rank 0 owns 9194 dof rows, 9443 owned nodes, 155 ghost nodes, and assembles 18790 elements.
+Passed.......OR Combination -> 
+  OK...........Number of Iterations = 237 < 1000
+  Converged....(2-Norm Imp Res Vec) / (2-Norm Res0)
+               residual [ 0 ] = 9.94991e-10 < 1e-09
+
+Belos iterations: 237
+Approximate nodal max error: 2.09164e-05
+Approximate L2 error (centroid quadrature): 2.88662e-05
+Timing summary (seconds):
+  mesh_load = 0.101526
+  assembly = 0.164979
+  linear_solve = 82.5722

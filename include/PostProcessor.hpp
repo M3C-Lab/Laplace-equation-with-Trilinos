@@ -31,6 +31,7 @@ void writeLegacyVtk(
 
 void reportPostProcessing(
   const PostProcessSummary& summary,
-  std::ostream& out);
+  std::ostream& out,
+  bool wroteFiles);
 
 }  // namespace laplace

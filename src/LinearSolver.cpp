@@ -107,7 +107,8 @@ DistributedSolution solveLinearSystem(
   const DiscreteSystem& system,
   const Teuchos::RCP<Tpetra::CrsMatrix<Scalar, LocalOrdinal, GlobalOrdinal, NodeType>>& matrix,
   const Teuchos::RCP<const Teuchos::Comm<int>>& comm,
-  std::ostream& out) {
+  std::ostream& out,
+  const double solverTolerance) {
   using matrix_type = Tpetra::CrsMatrix<Scalar, LocalOrdinal, GlobalOrdinal, NodeType>;
   using map_type = Tpetra::Map<LocalOrdinal, GlobalOrdinal, NodeType>;
   using vector_type = Tpetra::Vector<Scalar, LocalOrdinal, GlobalOrdinal, NodeType>;
@@ -135,18 +136,16 @@ DistributedSolution solveLinearSystem(
 
   auto problem = Teuchos::rcp(new problem_type(matrix, lhs, rhs));
 
-  if (comm->getSize() == 1) {
-    Ifpack2::Factory factory;
-    auto preconditioner = factory.template create<matrix_type>("RELAXATION", matrix);
-    Teuchos::ParameterList precParams;
-    precParams.set("relaxation: type", "Symmetric Gauss-Seidel");
-    precParams.set("relaxation: sweeps", 1);
-    precParams.set("relaxation: damping factor", 1.0);
-    preconditioner->setParameters(precParams);
-    preconditioner->initialize();
-    preconditioner->compute();
-    problem->setRightPrec(preconditioner);
-  }
+  Ifpack2::Factory factory;
+  auto preconditioner = factory.template create<matrix_type>("RELAXATION", matrix);
+  Teuchos::ParameterList precParams;
+  precParams.set("relaxation: type", "Symmetric Gauss-Seidel");
+  precParams.set("relaxation: sweeps", 2);
+  precParams.set("relaxation: damping factor", 1.0);
+  preconditioner->setParameters(precParams);
+  preconditioner->initialize();
+  preconditioner->compute();
+  problem->setRightPrec(preconditioner);
 
   if (!problem->setProblem()) {
     throw std::runtime_error("Belos failed to accept the linear problem.");
@@ -154,7 +153,7 @@ DistributedSolution solveLinearSystem(
 
   Teuchos::ParameterList solverParams;
   solverParams.set("Maximum Iterations", 1000);
-  solverParams.set("Convergence Tolerance", 1.0e-12);
+  solverParams.set("Convergence Tolerance", solverTolerance);
   solverParams.set("Verbosity", Belos::Errors + Belos::Warnings + Belos::FinalSummary);
   solverParams.set("Output Frequency", 1);
   solverParams.set("Output Style", 1);
@@ -192,6 +191,7 @@ DistributedSolution solveLinearSystem<double, int, long long, SolverNodeType>(
   const DiscreteSystem& system,
   const Teuchos::RCP<Tpetra::CrsMatrix<double, int, long long, SolverNodeType>>& matrix,
   const Teuchos::RCP<const Teuchos::Comm<int>>& comm,
-  std::ostream& out);
+  std::ostream& out,
+  double solverTolerance);
 
 }  // namespace laplace
