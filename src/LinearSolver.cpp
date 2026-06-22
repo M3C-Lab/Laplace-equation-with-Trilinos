@@ -10,6 +10,9 @@
 #include <kokkos/Kokkos_Core.hpp>
 
 #include <algorithm>
+#include <cctype>
+#include <cstdlib>
+#include <string>
 #include <stdexcept>
 
 #if defined(_OPENMP)
@@ -19,6 +22,41 @@
 namespace laplace {
 
 namespace detail {
+
+std::string uppercaseAscii(std::string value) {
+  std::transform(value.begin(), value.end(), value.begin(), [](unsigned char c) {
+    return static_cast<char>(std::toupper(c));
+  });
+  return value;
+}
+
+std::string selectedPreconditionerName() {
+  if (const char* env = std::getenv("LAPLACE_FEM_PREC_TYPE")) {
+    const std::string value = uppercaseAscii(env);
+    if (!value.empty()) {
+      return value;
+    }
+  }
+#if defined(LAPLACE_FEM_BACKEND_CUDA)
+  return "JACOBI";
+#else
+  return "SYMMETRIC_GAUSS_SEIDEL";
+#endif
+}
+
+int selectedMaxIterations() {
+  if (const char* env = std::getenv("LAPLACE_FEM_MAX_ITERS")) {
+    try {
+      const int value = std::stoi(env);
+      if (value > 0) {
+        return value;
+      }
+    } catch (const std::exception&) {
+    }
+    throw std::runtime_error("LAPLACE_FEM_MAX_ITERS must be a positive integer.");
+  }
+  return 1000;
+}
 
 template <class ValueType, class DeviceType>
 Kokkos::View<ValueType*, DeviceType> copyStdVectorToView(
@@ -58,6 +96,18 @@ int getApplicationThreadCount() {
 #else
   return 1;
 #endif
+}
+
+const char* defaultPreconditionerName() {
+#if defined(LAPLACE_FEM_BACKEND_CUDA)
+  return "JACOBI";
+#else
+  return "SYMMETRIC_GAUSS_SEIDEL";
+#endif
+}
+
+int defaultMaxIterations() {
+  return detail::selectedMaxIterations();
 }
 
 template <class Scalar, class LocalOrdinal, class GlobalOrdinal, class NodeType>
@@ -136,11 +186,22 @@ DistributedSolution solveLinearSystem(
 
   auto problem = Teuchos::rcp(new problem_type(matrix, lhs, rhs));
 
+  const std::string preconditionerName = detail::selectedPreconditionerName();
+  const int maxIterations = detail::selectedMaxIterations();
   Ifpack2::Factory factory;
   auto preconditioner = factory.template create<matrix_type>("RELAXATION", matrix);
   Teuchos::ParameterList precParams;
-  precParams.set("relaxation: type", "Symmetric Gauss-Seidel");
-  precParams.set("relaxation: sweeps", 2);
+  if (preconditionerName == "JACOBI") {
+    precParams.set("relaxation: type", "Jacobi");
+    precParams.set("relaxation: sweeps", 1);
+  } else if (preconditionerName == "SYMMETRIC_GAUSS_SEIDEL" ||
+             preconditionerName == "SGS") {
+    precParams.set("relaxation: type", "Symmetric Gauss-Seidel");
+    precParams.set("relaxation: sweeps", 2);
+  } else {
+    throw std::runtime_error(
+      "Unsupported LAPLACE_FEM_PREC_TYPE. Supported values: JACOBI, SYMMETRIC_GAUSS_SEIDEL, SGS.");
+  }
   precParams.set("relaxation: damping factor", 1.0);
   preconditioner->setParameters(precParams);
   preconditioner->initialize();
@@ -152,7 +213,7 @@ DistributedSolution solveLinearSystem(
   }
 
   Teuchos::ParameterList solverParams;
-  solverParams.set("Maximum Iterations", 1000);
+  solverParams.set("Maximum Iterations", maxIterations);
   solverParams.set("Convergence Tolerance", solverTolerance);
   solverParams.set("Verbosity", Belos::Errors + Belos::Warnings + Belos::FinalSummary);
   solverParams.set("Output Frequency", 1);
@@ -176,6 +237,8 @@ DistributedSolution solveLinearSystem(
     solution.ownedValues[i] = solutionHost(static_cast<LocalOrdinal>(i), 0);
   }
 
+  out << "Belos preconditioner: " << preconditionerName << '\n';
+  out << "Belos max iterations: " << maxIterations << '\n';
   out << "Belos iterations: " << solver.getNumIters() << '\n';
   return solution;
 }

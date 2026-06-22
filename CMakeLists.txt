@@ -62,6 +62,7 @@ set(laplace_fem_core_src
   src/Preprocessor.cpp
   src/TriangleQuadrature.cpp
   src/TriangleElement.cpp
+  src/ElementKernel.cpp
   src/Assembler.cpp
   src/LinearSolver.cpp
   src/PostProcessor.cpp

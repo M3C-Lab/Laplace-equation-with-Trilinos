@@ -1,0 +1,74 @@
+OpenMP thread benchmark
+preconditioner = JACOBI
+nx = 256
+ny = 256
+np = 7
+threads = 17
+solver_tolerance = 1e-9
+runs = 10
+
+run 01
+  iterations = 345
+  mesh_load = 0.018878
+  assembly = 0.0385166
+  linear_solve = 13.5228
+
+run 02
+  iterations = 345
+  mesh_load = 0.019984
+  assembly = 0.0383524
+  linear_solve = 13.2041
+
+run 03
+  iterations = 345
+  mesh_load = 0.0227316
+  assembly = 0.0387503
+  linear_solve = 13.4289
+
+run 04
+  iterations = 345
+  mesh_load = 0.0222039
+  assembly = 0.0381605
+  linear_solve = 13.3082
+
+run 05
+  iterations = 345
+  mesh_load = 0.0191265
+  assembly = 0.0410147
+  linear_solve = 13.2235
+
+run 06
+  iterations = 345
+  mesh_load = 0.0183899
+  assembly = 0.0379079
+  linear_solve = 13.4276
+
+run 07
+  iterations = 345
+  mesh_load = 0.0175647
+  assembly = 0.0432083
+  linear_solve = 13.3111
+
+run 08
+  iterations = 345
+  mesh_load = 0.0216825
+  assembly = 0.0376286
+  linear_solve = 13.3864
+
+run 09
+  iterations = 345
+  mesh_load = 0.0189851
+  assembly = 0.0321638
+  linear_solve = 13.3129
+
+run 10
+  iterations = 345
+  mesh_load = 0.0195682
+  assembly = 0.0348983
+  linear_solve = 13.3382
+
+Averages over 10 runs
+  iterations = 345
+  mesh_load_avg = 0.01991144
+  assembly_avg = 0.03806014
+  linear_solve_avg = 13.34637

@@ -1,0 +1,129 @@
+OpenMP thread scan summary
+preconditioner = JACOBI
+nx = 256
+ny = 256
+np = 7
+solver_tolerance = 1e-9
+sleep_seconds = 5
+runs = 10
+
+threads = 1
+  iterations = 345
+  mesh_load_avg = 0.02010027
+  assembly_avg = 0.04901008
+  linear_solve_avg = 0.1303509
+
+threads = 2
+  iterations = 345
+  mesh_load_avg = 0.02046126
+  assembly_avg = 0.05777476
+  linear_solve_avg = 0.1694494
+
+threads = 3
+  iterations = 345
+  mesh_load_avg = 0.02028889
+  assembly_avg = 0.04517001
+  linear_solve_avg = 0.1600978
+
+threads = 4
+  iterations = 345
+  mesh_load_avg = 0.01982291
+  assembly_avg = 0.03992274
+  linear_solve_avg = 0.1543122
+
+threads = 5
+  iterations = 345
+  mesh_load_avg = 0.0203923
+  assembly_avg = 0.03582421
+  linear_solve_avg = 0.1354222
+
+threads = 6
+  iterations = 345
+  mesh_load_avg = 0.02065167
+  assembly_avg = 0.03267926
+  linear_solve_avg = 0.149837
+
+threads = 7
+  iterations = 345
+  mesh_load_avg = 0.01943489
+  assembly_avg = 0.0300454
+  linear_solve_avg = 0.1528339
+
+threads = 8
+  iterations = 345
+  mesh_load_avg = 0.02035288
+  assembly_avg = 0.03054995
+  linear_solve_avg = 0.1447946
+
+threads = 9
+  iterations = 345
+  mesh_load_avg = 0.01926357
+  assembly_avg = 0.02822787
+  linear_solve_avg = 0.1656552
+
+threads = 10
+  iterations = 345
+  mesh_load_avg = 0.02064166
+  assembly_avg = 0.02849051
+  linear_solve_avg = 0.1525191
+
+threads = 11
+  iterations = 345
+  mesh_load_avg = 0.01997494
+  assembly_avg = 0.02895165
+  linear_solve_avg = 0.1451722
+
+threads = 12
+  iterations = 345
+  mesh_load_avg = 0.02031637
+  assembly_avg = 0.03017278
+  linear_solve_avg = 0.1563761
+
+threads = 13
+  iterations = 345
+  mesh_load_avg = 0.01922007
+  assembly_avg = 0.03099008
+  linear_solve_avg = 0.1663791
+
+threads = 14
+  iterations = 345
+  mesh_load_avg = 0.02015698
+  assembly_avg = 0.02877728
+  linear_solve_avg = 0.172789
+
+threads = 15
+  iterations = 345
+  mesh_load_avg = 0.02057923
+  assembly_avg = 0.02902941
+  linear_solve_avg = 0.1703433
+
+threads = 16
+  iterations = 345
+  mesh_load_avg = 0.01988108
+  assembly_avg = 0.03453532
+  linear_solve_avg = 1.3499077
+
+threads = 17
+  iterations = 345
+  mesh_load_avg = 0.01991144
+  assembly_avg = 0.03806014
+  linear_solve_avg = 13.34637
+
+threads = 18
+  iterations = 345
+  mesh_load_avg = 0.02123766
+  assembly_avg = 0.03870234
+  linear_solve_avg = 14.91618
+
+threads = 19
+  iterations = 345
+  mesh_load_avg = 0.0206604
+  assembly_avg = 0.04214087
+  linear_solve_avg = 16.7682
+
+threads = 20
+  iterations = 345
+  mesh_load_avg = 0.02063987
+  assembly_avg = 0.0424128
+  linear_solve_avg = 18.12752
+

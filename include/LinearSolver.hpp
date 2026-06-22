@@ -45,5 +45,7 @@ DistributedSolution solveLinearSystem(
   double solverTolerance = 1.0e-9);
 
 int getApplicationThreadCount();
+const char* defaultPreconditionerName();
+int defaultMaxIterations();
 
 }  // namespace laplace

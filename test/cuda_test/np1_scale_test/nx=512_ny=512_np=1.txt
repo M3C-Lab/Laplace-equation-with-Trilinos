@@ -1,0 +1,23 @@
+CUDA np=1 scale benchmark report
+mesh = nx=512_ny=512_np=1
+mesh_dir = /home/xuanming/Desktop/Laplace-equation-with-Trilinos/Mesh/nx=512_ny=512_np=1
+runs = 10
+solver_tolerance = 1e-9
+mpi_exec = /home/xuanming/lib/mpich-4.3.2/bin/mpiexec
+
+Per-run timings (seconds)
+run 01: mesh_load=0.112558 assembly=1.29884 linear_solve=6.7695
+run 02: mesh_load=0.0772609 assembly=1.29153 linear_solve=6.81879
+run 03: mesh_load=0.0780497 assembly=1.29443 linear_solve=6.82738
+run 04: mesh_load=0.0774554 assembly=1.29647 linear_solve=6.83089
+run 05: mesh_load=0.0771338 assembly=1.29422 linear_solve=6.78136
+run 06: mesh_load=0.0771895 assembly=1.29672 linear_solve=6.74051
+run 07: mesh_load=0.0768463 assembly=1.29745 linear_solve=6.75852
+run 08: mesh_load=0.0770155 assembly=1.29577 linear_solve=6.78311
+run 09: mesh_load=0.0783436 assembly=1.30083 linear_solve=6.77001
+run 10: mesh_load=0.0768713 assembly=1.29539 linear_solve=6.78651
+
+Averages over 10 runs (seconds)
+mesh_load_avg = 0.0808724
+assembly_avg = 1.296165
+linear_solve_avg = 6.786658

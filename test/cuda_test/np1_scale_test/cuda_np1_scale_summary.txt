@@ -1,0 +1,21 @@
+CUDA np=1 scale benchmark summary
+runs = 10
+solver_tolerance = 1e-9
+mpi_exec = /home/xuanming/lib/mpich-4.3.2/bin/mpiexec
+cases = nx=256_ny=256_np=1 nx=512_ny=512_np=1 nx=1024_ny=1024_np=1
+
+nx=256_ny=256_np=1
+  mesh_load_avg = 0.02165394
+  assembly_avg = 0.3191675
+  linear_solve_avg = 1.087284
+
+nx=512_ny=512_np=1
+  mesh_load_avg = 0.0808724
+  assembly_avg = 1.296165
+  linear_solve_avg = 6.786658
+
+nx=1024_ny=1024_np=1
+  mesh_load_avg = 0.3164414
+  assembly_avg = 5.259504
+  linear_solve_avg = 52.69838
+

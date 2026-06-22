@@ -1,0 +1,55 @@
+CUDA solver and assembly comparison notes
+date = 2026-06-22
+
+Case: nx=128, ny=128, np=1
+
+Controlled variants
+- HOST assembly + SYMMETRIC_GAUSS_SEIDEL:
+  assembly = 0.0795403 s
+  linear_solve = 0.22506 s
+  Belos iterations = 75
+- HOST assembly + JACOBI:
+  assembly = 0.0804143 s
+  linear_solve = 0.0986398 s
+  Belos iterations = 179
+- KOKKOS_ELEMENT assembly + SYMMETRIC_GAUSS_SEIDEL:
+  assembly = 0.0920905 s
+  linear_solve = 0.225309 s
+  Belos iterations = 75
+- KOKKOS_ELEMENT assembly + JACOBI:
+  assembly = 0.0926606 s
+  linear_solve = 0.0966726 s
+  Belos iterations = 179
+
+Conclusions from nx=128, ny=128, np=1
+- The main CUDA performance difference comes from the solver/preconditioner choice, not from the current assembly path.
+- JACOBI needs more iterations than SYMMETRIC_GAUSS_SEIDEL, but its total linear solve time is much smaller on the CUDA backend.
+- The current KOKKOS_ELEMENT assembly path is functional, but at this mesh size it is slightly slower than HOST assembly.
+- This suggests the solver route is already beneficial for CUDA, while the assembly route still needs deeper optimization to reduce host/device transfer and host-side accumulation overhead.
+
+Case: nx=256, ny=256, np=1
+
+Controlled variants
+- HOST assembly + SYMMETRIC_GAUSS_SEIDEL:
+  assembly = 0.324136 s
+  linear_solve = 1.08351 s
+  Belos iterations = 142
+- HOST assembly + JACOBI:
+  assembly = 0.322864 s
+  linear_solve = 0.261875 s
+  Belos iterations = 345
+- KOKKOS_ELEMENT assembly + SYMMETRIC_GAUSS_SEIDEL:
+  assembly = 0.376062 s
+  linear_solve = 1.08707 s
+  Belos iterations = 142
+- KOKKOS_ELEMENT assembly + JACOBI:
+  assembly = 0.376435 s
+  linear_solve = 0.257811 s
+  Belos iterations = 345
+
+Conclusions from nx=256, ny=256, np=1
+- The same trend remains at the larger 256x256 mesh.
+- The current assembly choice changes the assembly time, but has almost no effect on iteration count or linear solve time.
+- HOST assembly is still faster than KOKKOS_ELEMENT assembly in the current implementation.
+- JACOBI remains much faster than SYMMETRIC_GAUSS_SEIDEL for the CUDA linear solve even though it requires substantially more iterations.
+- This strengthens the conclusion that the solver-side change is the main useful CUDA optimization at present, while the assembly-side Kokkos path is still an experimental first step.

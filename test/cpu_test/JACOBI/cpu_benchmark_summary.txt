@@ -1,0 +1,46 @@
+CPU benchmark summary
+preconditioner = JACOBI
+runs = 10
+solver_tolerance = 1e-9
+max_iterations = 2000 for nx=1024 cases, 1000 for nx=128/256/512 cases
+case_nx_list = 128 256 512 1024
+
+nx=128_ny=128_np=1
+  mesh_load_avg = 0.006931568
+  assembly_avg = 0.07883664
+  linear_solve_avg = 0.07768301
+
+nx=128_ny=128_np=2
+  mesh_load_avg = 0.006093706
+  assembly_avg = 0.03941857
+  linear_solve_avg = 0.0541978
+
+nx=256_ny=256_np=1
+  mesh_load_avg = 0.02099248
+  assembly_avg = 0.3201751
+  linear_solve_avg = 0.4490721
+
+nx=256_ny=256_np=7
+  mesh_load_avg = 0.0205419
+  assembly_avg = 0.05141725
+  linear_solve_avg = 0.1288561
+
+nx=512_ny=512_np=1
+  mesh_load_avg = 0.0774818
+  assembly_avg = 1.295073
+  linear_solve_avg = 3.167411
+
+nx=512_ny=512_np=26
+  mesh_load_avg = 0.07216597
+  assembly_avg = 0.08504078
+  linear_solve_avg = 0.3080254
+
+  nx=1024_ny=1024_np=1
+  mesh_load_avg = 0.3113557
+  assembly_avg = 5.258975
+  linear_solve_avg = 29.24747
+
+nx=1024_ny=1024_np=105
+  mesh_load_avg = 0.3482769
+  assembly_avg = 0.1338667
+  linear_solve_avg = 1.909843
