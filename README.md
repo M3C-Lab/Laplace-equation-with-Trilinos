@@ -41,7 +41,7 @@ with homogeneous Dirichlet boundary conditions and matching right-hand side.
 
 This repo now provides three user-facing CMake presets:
 
-- `cpu`
+- `cpu(MPI)`
 - `openmp`
 - `cuda`
 
