@@ -83,7 +83,7 @@ The generated mesh files are stored under `Mesh/nx=16_ny=16_np=2/`.
 
 ## Run
 
-CPU:
+CPU(MPI):
 
 ```bash
 ./scripts/run_cpu.sh 16 16
@@ -108,6 +108,22 @@ CUDA:
 - The CPU path supports MPI-partitioned execution using the preprocessed mesh files.
 - The previous multi-rank partition option was removed because it did not yet provide a robust general partitioning strategy.
 - The current presets use `nvcc_wrapper` because this Trilinos installation exports CUDA-related compile options even for host-side builds.
+
+## CUDA + MPI
+
+ - A "CUDA-aware" mpich is necessary when configured and installed:
+
+ ```bash
+ ./configure \
+  --prefix=/home/xuanming/lib/mpich-4.3.2 \
+  --with-device=ch4:ucx \
+  --with-cuda=/usr/local/cuda-13 \
+  --enable-shared \
+  --enable-cxx \
+  --disable-fortran \
+  --with-hwloc=embedded \
+  CFLAGS=-std=gnu11
+ ```
 
 ## Output
 
